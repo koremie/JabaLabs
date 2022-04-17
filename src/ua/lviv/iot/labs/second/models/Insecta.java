@@ -3,9 +3,9 @@ package ua.lviv.iot.labs.second.models;
 public class Insecta extends Arthropoda {
 	private Boolean hasWings;
 	
-	public Insecta(String name, String species, String size, String age, String lifespan, DangerLevel dangerLevel,
+	public Insecta(String name, String species, String size, String age, int lifespanInYears, DangerLevel dangerLevel,
 			String preferedFood, float daysNotFed, Boolean hasWings) {
-		super(name, species, size, age, lifespan, dangerLevel, preferedFood, daysNotFed);
+		super(name, species, size, age, lifespanInYears, dangerLevel, preferedFood, daysNotFed);
 		this.hasWings = hasWings;
 	}
 	
