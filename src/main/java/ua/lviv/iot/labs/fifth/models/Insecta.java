@@ -12,6 +12,15 @@ public class Insecta extends Arthropoda {
 			String preferedFood, float daysNotFed, Boolean hasWings) {
 		super(name, species, size, age, lifespanInYears, dangerLevel, preferedFood, daysNotFed);
 		this.hasWings = hasWings;
+
+	}
+
+	public String getHeaders() {
+		return super.getHeaders() + ", hasWings";
+	}
+
+	public String toCSV() {
+		return super.toCSV() + "," + hasWings;
 	}
 
 	@Override

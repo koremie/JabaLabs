@@ -14,6 +14,14 @@ public class Diplopoda extends Arthropoda {
 		this.legCount = legCount;
 	}
 
+	public String getHeaders() {
+		return super.getHeaders() + ", legCount";
+	}
+
+	public String toCSV() {
+		return super.toCSV() + "," + legCount;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() + ", legCount: " + legCount;

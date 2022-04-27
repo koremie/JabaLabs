@@ -20,14 +20,14 @@ class TerrariumAnimalsManagerTest {
 						true),
 				new Amphibia("Spook", "Dendrobatidae", "5cm", "7y", 13, DangerLevel.MODERATE, "Insects", 2, true),
 				new Amphibia("Sam", "Chacoan horned frog", "10cm", "4y", 7, DangerLevel.MODERATE,
-						"Insects, small mammals", 3.2f, true),
+						"Insects and small mammals", 3.2f, true),
 				new Amphibia("Jumpy", "Hyla arborea", "32mm", "11mnth", 20, DangerLevel.LOW, "Insects", 2.3f, true),
 				new Arachnida("Grey", "Tarantula", "43cm", "5y", 24, DangerLevel.EXTREME, "Insects", 5, true),
 				new Arachnida("Lol", "Heterometrus", "7cm", "8mnth", 9, DangerLevel.HIGH, "Insects", 4, false),
 				new Diplopoda("Ash", "Anadenobolus monilicornis", "3cm", "6mnth", 6, DangerLevel.CONSIDERABLE,
-						"plants, insects", 8, 160),
+						"plants and insects", 8, 160),
 				new Malacostraca("UwU", "Armadillidium vulgare", "15mm", "3mnth", 2, DangerLevel.LOW,
-						"plants, animal wastes", 6, false),
+						"plants and animal wastes", 6, false),
 				new Insecta("Fighty", "European mantis", "9cm", "4y", 12, DangerLevel.MODERATE, "Insects", 7, true));
 		manager.addAnimals(animalsList);
 	}
@@ -61,7 +61,7 @@ class TerrariumAnimalsManagerTest {
 		assertTrue(lowDangerousLevelAnimals.contains(
 				new Amphibia("Jumpy", "Hyla arborea", "32mm", "11mnth", 20, DangerLevel.LOW, "Insects", 2.3f, true)));
 		assertTrue(lowDangerousLevelAnimals.contains(new Malacostraca("UwU", "Armadillidium vulgare", "15mm", "3mnth",
-				2, DangerLevel.LOW, "plants, animal wastes", 6, false)));
+				2, DangerLevel.LOW, "plants and animal wastes", 6, false)));
 	}
 
 	@Test
@@ -95,7 +95,7 @@ class TerrariumAnimalsManagerTest {
 		manager.sortByLifespan(SortingOrder.ASCENDING);
 		assertEquals(
 				"Name: UwU, species: Armadillidium vulgare, size: 15mm, age: 3mnth, lifespanInYears: 2, "
-						+ "dangerLevel: LOW, diet: plants, animal wastes, daysNotFed: 6.0, hasClaws: false",
+						+ "dangerLevel: LOW, diet: plants and animal wastes, daysNotFed: 6.0, hasClaws: false",
 				manager.getAnimalsList().get(0).toString());
 		assertEquals(
 				"Name: Renny, species: Pachydactylus rangei, size: 14cm, age: 2.3y, lifespanInYears: 5, "
@@ -103,11 +103,11 @@ class TerrariumAnimalsManagerTest {
 				manager.getAnimalsList().get(1).toString());
 		assertEquals(
 				"Name: Ash, species: Anadenobolus monilicornis, size: 3cm, age: 6mnth, lifespanInYears: 6, "
-						+ "dangerLevel: CONSIDERABLE, diet: plants, insects, daysNotFed: 8.0, legCount: 160",
+						+ "dangerLevel: CONSIDERABLE, diet: plants and insects, daysNotFed: 8.0, legCount: 160",
 				manager.getAnimalsList().get(2).toString());
 		assertEquals(
 				"Name: Sam, species: Chacoan horned frog, size: 10cm, age: 4y, lifespanInYears: 7, "
-						+ "dangerLevel: MODERATE, diet: Insects, small mammals, daysNotFed: 3.2, producesSlime: true",
+						+ "dangerLevel: MODERATE, diet: Insects and small mammals, daysNotFed: 3.2, producesSlime: true",
 				manager.getAnimalsList().get(3).toString());
 		assertEquals(
 				"Name: Sandy, species: Lepidodactylus lugubris, size: 9cm, age: 2y, lifespanInYears: 8, "
@@ -140,7 +140,7 @@ class TerrariumAnimalsManagerTest {
 		manager.sortByLifespan(SortingOrder.DESCENDING);
 		assertEquals(
 				"Name: UwU, species: Armadillidium vulgare, size: 15mm, age: 3mnth, lifespanInYears: 2, "
-						+ "dangerLevel: LOW, diet: plants, animal wastes, daysNotFed: 6.0, hasClaws: false",
+						+ "dangerLevel: LOW, diet: plants and animal wastes, daysNotFed: 6.0, hasClaws: false",
 				manager.getAnimalsList().get(9).toString());
 		assertEquals(
 				"Name: Renny, species: Pachydactylus rangei, size: 14cm, age: 2.3y, lifespanInYears: 5, "
@@ -148,11 +148,11 @@ class TerrariumAnimalsManagerTest {
 				manager.getAnimalsList().get(8).toString());
 		assertEquals(
 				"Name: Ash, species: Anadenobolus monilicornis, size: 3cm, age: 6mnth, lifespanInYears: 6, "
-						+ "dangerLevel: CONSIDERABLE, diet: plants, insects, daysNotFed: 8.0, legCount: 160",
+						+ "dangerLevel: CONSIDERABLE, diet: plants and insects, daysNotFed: 8.0, legCount: 160",
 				manager.getAnimalsList().get(7).toString());
 		assertEquals(
 				"Name: Sam, species: Chacoan horned frog, size: 10cm, age: 4y, lifespanInYears: 7, "
-						+ "dangerLevel: MODERATE, diet: Insects, small mammals, daysNotFed: 3.2, producesSlime: true",
+						+ "dangerLevel: MODERATE, diet: Insects and small mammals, daysNotFed: 3.2, producesSlime: true",
 				manager.getAnimalsList().get(6).toString());
 		assertEquals(
 				"Name: Sandy, species: Lepidodactylus lugubris, size: 9cm, age: 2y, lifespanInYears: 8, "

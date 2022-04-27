@@ -1,21 +1,19 @@
 package ua.lviv.iot.labs.fifth.manager.impl;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
-import lombok.Getter;
 import ua.lviv.iot.labs.fifth.manager.ITerrariumAnimalsManager;
 import ua.lviv.iot.labs.fifth.models.Animal;
 import ua.lviv.iot.labs.fifth.models.DangerLevel;
 import ua.lviv.iot.labs.fifth.models.SortingOrder;
 
-@Getter
 public class TerrariumAnimalsManager implements ITerrariumAnimalsManager {
-
 	private List<Animal> animalsList = new LinkedList<>();
+
+	public List<Animal> getAnimalsList() {
+		return new LinkedList<>(animalsList);
+	}
 
 	@Override
 	public void addAnimals(List<Animal> animals) {
@@ -46,9 +44,12 @@ public class TerrariumAnimalsManager implements ITerrariumAnimalsManager {
 	@Override
 	public void sortByLifespan(SortingOrder sortOrder) {
 		switch (sortOrder) {
-		case ASCENDING -> animalsList.sort(Comparator.comparing(Animal::getLifespanInYears));
-		case DESCENDING -> animalsList.sort(Collections.reverseOrder(Comparator.comparing(Animal::getLifespanInYears)));
+		case ASCENDING:
+			animalsList.sort(Comparator.comparing(Animal::getLifespanInYears));
+			break;
+		case DESCENDING:
+			animalsList.sort(Collections.reverseOrder(Comparator.comparing(Animal::getLifespanInYears)));
+			break;
 		}
-
 	}
 }

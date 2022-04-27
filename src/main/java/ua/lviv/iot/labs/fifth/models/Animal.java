@@ -17,6 +17,15 @@ public abstract class Animal {
 	private String diet;
 	private float daysNotFed;
 
+	public String getHeaders() {
+		return "name, species, size, age, lifespanInYears, dangerLevel, diet, daysNotFed";
+	}
+
+	public String toCSV() {
+		return name + "," + species + "," + size + "," + age + "," + lifespanInYears + "," + dangerLevel + "," + diet
+				+ "," + daysNotFed;
+	}
+
 	@Override
 	public String toString() {
 		return "Name: " + name + ", species: " + species + ", size: " + size + ", age: " + age + ", lifespanInYears: "

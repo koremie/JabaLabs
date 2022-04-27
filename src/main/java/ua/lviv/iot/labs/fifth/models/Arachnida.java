@@ -14,6 +14,14 @@ public class Arachnida extends Arthropoda {
 		this.weavesWeb = weavesWeb;
 	}
 
+	public String getHeaders() {
+		return super.getHeaders() + ", weavesWeb";
+	}
+
+	public String toCSV() {
+		return super.toCSV() + "," + weavesWeb;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() + ", weavesWeb: " + weavesWeb;

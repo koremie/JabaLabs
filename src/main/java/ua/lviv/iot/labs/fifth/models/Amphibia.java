@@ -14,6 +14,14 @@ public class Amphibia extends Chordata {
 		this.producesSlime = producesSlime;
 	}
 
+	public String getHeaders() {
+		return super.getHeaders() + ", producesSlime";
+	}
+
+	public String toCSV() {
+		return super.toCSV() + "," + producesSlime;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() + ", producesSlime: " + producesSlime;

@@ -14,6 +14,14 @@ public class Reptilia extends Chordata {
 		this.resetsSkin = resetsSkin;
 	}
 
+	public String getHeaders() {
+		return super.getHeaders() + ", resetsSkin";
+	}
+
+	public String toCSV() {
+		return super.toCSV() + "," + resetsSkin;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() + ", resetsSkin: " + resetsSkin;
