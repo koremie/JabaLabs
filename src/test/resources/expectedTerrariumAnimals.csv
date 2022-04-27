@@ -1,0 +1,17 @@
+name, species, size, age, lifespanInYears, dangerLevel, diet, daysNotFed, producesSlime
+Spook,Dendrobatidae,5cm,7y,13,MODERATE,Insects,2.0,true
+Sam,Chacoan horned frog,10cm,4y,7,MODERATE,Insects and small mammals,3.2,true
+Jumpy,Hyla arborea,32mm,11mnth,20,LOW,Insects,2.3,true
+name, species, size, age, lifespanInYears, dangerLevel, diet, daysNotFed, weavesWeb
+Grey,Tarantula,43cm,5y,24,EXTREME,Insects,5.0,true
+Lol,Heterometrus,7cm,8mnth,9,HIGH,Insects,4.0,false
+name, species, size, age, lifespanInYears, dangerLevel, diet, daysNotFed, legCount
+Ash,Anadenobolus monilicornis,3cm,6mnth,6,CONSIDERABLE,plants and insects,8.0,160
+name, species, size, age, lifespanInYears, dangerLevel, diet, daysNotFed, hasWings
+Fighty,European mantis,9cm,4y,12,MODERATE,Insects,7.0,true
+Cutie,European mantis,10cm,3y,12,MODERATE,Insects,6.5,true
+name, species, size, age, lifespanInYears, dangerLevel, diet, daysNotFed, hasClaws
+UwU,Armadillidium vulgare,15mm,3mnth,2,LOW,plants and animal wastes,6.0,false
+name, species, size, age, lifespanInYears, dangerLevel, diet, daysNotFed, resetsSkin
+Sandy,Lepidodactylus lugubris,9cm,2y,8,LOW,Insects,1.6,true
+Renny,Pachydactylus rangei,14cm,2.3y,5,LOW,Insects,1.0,true
