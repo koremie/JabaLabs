@@ -1,3 +1,4 @@
 # JabaLabs
-## Lab 4 task
-- Make lab 2-3 project compatible with maven
+## Lab 5 task
+- Write modular tests for the project
+- Achieve around 80% code coverage with tests
