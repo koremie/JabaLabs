@@ -6,24 +6,24 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Amphibia extends Chordata {
-	private Boolean producesSlime;
+    private Boolean producesSlime;
 
-	public Amphibia(String name, String species, String size, String age, int lifespanInYears, DangerLevel dangerLevel,
-			String diet, float daysNotFed, Boolean producesSlime) {
-		super(name, species, size, age, lifespanInYears, dangerLevel, diet, daysNotFed);
-		this.producesSlime = producesSlime;
-	}
+    public Amphibia(String name, String species, String size, String age, int lifespanInYears, DangerLevel dangerLevel,
+            String diet, float daysNotFed, Boolean producesSlime) {
+        super(name, species, size, age, lifespanInYears, dangerLevel, diet, daysNotFed);
+        this.producesSlime = producesSlime;
+    }
 
-	public String getHeaders() {
-		return super.getHeaders() + ", producesSlime";
-	}
+    public String getHeaders() {
+        return super.getHeaders() + ", producesSlime";
+    }
 
-	public String toCSV() {
-		return super.toCSV() + "," + producesSlime;
-	}
+    public String toCSV() {
+        return super.toCSV() + "," + producesSlime;
+    }
 
-	@Override
-	public String toString() {
-		return super.toString() + ", producesSlime: " + producesSlime;
-	}
+    @Override
+    public String toString() {
+        return super.toString() + ", producesSlime: " + producesSlime;
+    }
 }
