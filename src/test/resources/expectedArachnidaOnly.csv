@@ -1,0 +1,4 @@
+name, species, size, age, lifespanInYears, dangerLevel, diet, daysNotFed, weavesWeb
+Grey,Tarantula,43cm,5y,24,EXTREME,Insects,5.0,true
+Lol,Heterometrus,7cm,8mnth,9,HIGH,Insects,4.0,false
+Spidey,Tarantula,43cm,4y,24,EXTREME,Insects,5.0,true
