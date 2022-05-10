@@ -6,5 +6,4 @@ public abstract class Chordata extends Animal {
 			String diet, float daysNotFed) {
 		super(name, species, size, age, lifespanInYears, dangerLevel, diet, daysNotFed);
 	}
-
 }

@@ -40,6 +40,7 @@ public class Main {
 		animalsList.add(tarantula);
 		animalsList.add(scorpion);
 		animalsList.add(millipede);
+		animalsList.add(isopoda);
 		animalsList.add(mantis);
 		manager.addAnimals(animalsList);
 		System.out.println();
