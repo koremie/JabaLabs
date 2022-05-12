@@ -2,12 +2,12 @@ package ua.lviv.iot.labs.seventh;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.regex.Matcher;
+import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import lombok.AllArgsConstructor;
 
@@ -23,7 +23,6 @@ public class RegEx {
             while (scanner.hasNextLine()) {
                 result.append(scanner.nextLine()).append("\n");
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -32,16 +31,7 @@ public class RegEx {
     }
 
     public List<String> getGithubUsersInfo() {
-        String text = fileToString();
-        Set<String> githubUsersInfo = new HashSet<>();
-
-        Pattern githubUserPattern = Pattern.compile(GITHUB_USER_INFO_REGEX);
-        Matcher githubUserMatcher = githubUserPattern.matcher(text);
-        
-        while (githubUserMatcher.find()) {
-            githubUsersInfo.add(githubUserMatcher.group());
-        }
-        
-        return List.copyOf(githubUsersInfo);
+        return List.copyOf(Pattern.compile(GITHUB_USER_INFO_REGEX).matcher(fileToString()).results()
+                .map(MatchResult::group).collect(Collectors.toSet()));
     }
 }

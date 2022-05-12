@@ -13,7 +13,8 @@ class RegExTest {
 
     @Test
     void getGithubUserInfoTest() {
-        RegEx regex = new RegEx(new File("ProjectReport.txt"));
+        RegEx regex = new RegEx(
+                new File(Paths.get("").toAbsolutePath().toString() + "\\src\\test\\resources", "ProjectReport.txt"));
         List<String> expected = Arrays.asList("RybOlya", "IgorBrat", "Buypir", "maxi4ek23");
         assertEquals(expected, regex.getGithubUsersInfo());
     }
@@ -24,7 +25,7 @@ class RegExTest {
                 "EmptyProjectReport.txt"));
         assertTrue(regex.getGithubUsersInfo().isEmpty());
     }
-    
+
     @Test
     void noGithubRepositoryLinksFileTest() {
         RegEx regex = new RegEx(new File(Paths.get("").toAbsolutePath().toString() + "\\src\\test\\resources",
